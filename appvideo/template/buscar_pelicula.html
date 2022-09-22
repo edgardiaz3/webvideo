@@ -1,0 +1,25 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<div>
+
+    <form class="formDataPelicula" action="/appvideo/buscar_pelicula/" method="GET">
+        <input type="text" name="nombre" placeholder="nombre">
+        <button type="submit" class="btn btn-primary btndj">Buscar</button>
+    </form>
+</div>
+<div>
+    {% if peliculas %}
+    <ul>
+        {% for pelicula in peliculas %}
+        <li>{{pelicula.nombre}}</li>
+        <li>{{pelicula.actorprincipal}}</li>
+        <li>{{pelicula.anio}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+
+{% block contenido %}

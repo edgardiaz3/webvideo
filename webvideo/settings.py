@@ -55,7 +55,7 @@ ROOT_URLCONF = 'webvideo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [f'{BASE_DIR}/webvideo/template'],
+        'DIRS': [f'{BASE_DIR}/webvideo/template',f'{BASE_DIR}/appvideo/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

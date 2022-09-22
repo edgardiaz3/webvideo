@@ -1,0 +1,36 @@
+{% extends "home.html" %}
+
+{% load static %}
+<!--link rel="stylesheet" href="{%static 'css/myestilo.css'%}"-->
+<link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}"
+{% block contenido %}
+    <p>.</p>
+    <p>.</p>
+    <p>Formulario de Peliculas</p>
+    <div class="contenidoPeliculas">
+        <form class="formDataPeliculas" action="/appvideo/registrar/" method = "POST"> {% csrf_token %}
+            <input type="text" name="nombre" placeholder="nombre">
+            <input type="text" name="actorprincipal" placeholder="actorprincipal">
+            <input type="text" name="anio" placeholder="anio">
+            <button type="submit" class="btn btn-primary btndj">Registrar</button>
+        </form>
+    <p>Formulario de Series</p>
+    <div class="contenidoSeries">
+         <form class="formDataSeries" action="/appvideo/registrar/" method = "POST"> {% csrf_token %}
+            <input type="text" name="nombre" placeholder="nombre">
+            <input type="text" name="actorprincipal" placeholder="actorprincipal">
+            <input type="text" name="anio" placeholder="anio">
+            <button type="submit" class="btn btn-primary btndj">Registrar</button>
+    <p>Formulario de Documentales</p>
+    <div class="contenidoDocumentales">
+         <form class="formDataDocumentales" action="/appvideo/registrar/" method = "POST"> {% csrf_token %}
+            <input type="text" name="nombre" placeholder="nombre">
+            <input type="text" name="productora" placeholder="productora">
+            <input type="text" name="genero" placeholder="genero">
+            <button type="submit" class="btn btn-primary btndj">Registrar</button>
+        </form>
+        </form>
+    </div>
+
+{% endblock %}
+

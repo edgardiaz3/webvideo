@@ -1,0 +1,44 @@
+<<!-- este el HTML que intentaba utilizar para hacerlo en una sola pantalla-->
+
+
+<!-- #region <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contenido Audivisual</title>
+</head>
+<body>
+    <h1> Formulario de Contenido</h1>
+    {% if formulario.errors or formulario2.errors or formulario3.errors%}
+    <p style="color: red;">Estan mal los datos, revisar </p>"
+    {% endif %}
+    <form action=""  method="POST">{% csrf_token %}
+        <p style="color: green;">Peliculas </p>
+        <table>
+            {{formulario.as_table}}
+            
+            
+        </table>
+        <button type="submit">Registrar</button>
+    <form action="" method="POST">{% csrf_token %}
+        
+        <p style="color: green;">Series </p>
+        <table>
+            {{formulario2.as_table}}
+        </table>
+        <button type="submit">Registrar</button>
+    <form action="" method="POST">{% csrf_token %}
+        
+        <p style="color: green;">Documentales </p>
+        <table>
+            {{formulario3.as_table}}
+        </table>
+        <button type="submit">Registrar</button>
+</body>
+
+
+</html>
+
+-->

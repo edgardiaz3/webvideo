@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pelicula</title>
+</head>
+
+<body>
+    <h1> Formulario de Pelicula</h1>
+    {% if formulario.errors %}
+    <p style="color: red;">Estan mal los datos, revisar </p>"
+    {% endif %}
+    <form action=""  method="POST">{% csrf_token %}
+        <p style="color: green;">Peliculas </p>
+        <table>
+            {{formulario.as_table}}
+            
+            
+        </table>
+        <button type="submit">Registrar</button>
+
+    </body>
+<p></p>
+<a href="/appvideo/home" class="btn btn-lg btn-secondary fw-bold border-green bg-green">Regresar a Home</a>
+</html>

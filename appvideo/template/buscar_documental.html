@@ -1,0 +1,25 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block contenido %}
+<div>
+
+    <form class="formDocumental" action="/appvideo/buscar_documental/" method="GET">
+        <input type="text" name="productora" placeholder="productora">
+        <button type="submit" class="btn btn-primary btndj">Buscar</button>
+    </form>
+</div>
+<div>
+    {% if documentales %}
+    <ul>
+        {% for documental in documentales%}
+        <li>{{documental.nombre}}</li>
+        <li>{{documental.productora}}</li>
+        <li>{{documental.genero}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+
+{% block contenido %}
